@@ -163,8 +163,10 @@ def main():
         initial_sidebar_state="expanded",
     )
 
-    openai_api_key = os.getenv("OPENAI_API_KEY") if os.getenv("OPENAI_API_KEY") is not None else ""  # only for development environment, otherwise it should return None
-    google_api_key = os.getenv("GOOGLE_API_KEY") if os.getenv("GOOGLE_API_KEY") is not None else ""  # only for development environment, otherwise it should return None
+    #openai_api_key = os.getenv("OPENAI_API_KEY") if os.getenv("OPENAI_API_KEY") is not None else ""  # only for development environment, otherwise it should return None
+    #google_api_key = os.getenv("GOOGLE_API_KEY") if os.getenv("GOOGLE_API_KEY") is not None else ""  # only for development environment, otherwise it should return None
+    openai_api_key = st.secrets["OPENAI_API_KEY"] if st.secrets["OPENAI_API_KEY"] is not None else ""
+    google_api_key = st.secrets["GOOGLE_API_KEY"] if st.secrets["GOOGLE_API_KEY"] is not None else ""
 
     # --- Header ---
     st.html("""<h1 style="text-align: center; color: #6ca395;"><i>Nombre de la empresa</i></h1>""")
