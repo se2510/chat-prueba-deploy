@@ -158,7 +158,7 @@ def main():
 
     # --- Page Config ---
     st.set_page_config(
-        page_title="EMPRESA_CHATBOT",
+        page_title="🤖CHATBOT🤖",
         layout="centered",
         initial_sidebar_state="expanded",
     )
@@ -169,11 +169,11 @@ def main():
     google_api_key = st.secrets["GOOGLE_API_KEY"] if st.secrets["GOOGLE_API_KEY"] is not None else ""
 
     # --- Header ---
-    st.html("""<h1 style="text-align: center; color: #6ca395;"><i>Nombre de la empresa</i></h1>""")
+    st.html("""<h1 style="text-align: center; color: #6ca395;"><i>Chatbot inteligente 🤖</i></h1>""")
 
     # --- Side Bar ---
     with st.sidebar:
-        st.markdown("Puedes poner contenido aquí")  
+        st.markdown("Bienvenidos al chatbot inteligente! 🤖")  
     # --- Main Content ---
     # Checking if the user has introduced the OpenAI API Key, if not, a warning is displayed
     if (openai_api_key == "" or openai_api_key is None or "sk-" not in openai_api_key) and (google_api_key == "" or google_api_key is None):
@@ -338,7 +338,7 @@ def main():
 
 
         # Chat input
-        if prompt := st.chat_input("Hi! Ask me anything..."):
+        if prompt := st.chat_input("Hola!, preguntame lo que quieras..."):
             
             st.session_state.messages.append(
                 {
